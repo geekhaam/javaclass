@@ -1,0 +1,33 @@
+· 2차원 배열
+
+- Array : 고정 길이, one data type
+
+int [] k2 = new int[3];		=> 1차원 배열
+int [] [] k = new int [2] [3];	=> 2차원 배열
+
+
+· 명령어인자 / 명령행인자 CommandLine Argument
+
+public static void main(String[] args)
+			 => 명령어인자
+
+- args 명령어 인자를 활용하여 출력할 수 있다.
+
+- CLI 모드에서 실행시에는 각 프로젝트의 src 디렉토리에 위치시킨 후,
+  java [패키지명].[자바클래스명] [명령어인자] 로 실행할 수 있다.
+
+- Eclipse에서 시작할 경우 Run 카테고리의 Run Configurations에서 Arguments에 명령어인자를
+  추가시킨 후에 실행할 수 있다.
+
+* 채팅 프로그램 만들 때 사용
+
+
+· 탐색 Search
+
+- 순차 탐색(sequential search)
+	평균 검색 횟수 : (n+1)/2
+
+- 이진 탐색(binary search)
+	평균 검색 횟수 : log2(n)+1
+
+- 피보나치 탐색(fibonacci search)

@@ -1,0 +1,12 @@
+package com.java.file;
+
+public class ByteStream {
+
+	public static void main(String[] args) {
+		//FileInputStream, FileOutputStream
+		//read() : 1Byte ¥‹¿ß
+		//read(array), write()
+
+	}
+
+}

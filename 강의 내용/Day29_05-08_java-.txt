@@ -1,0 +1,37 @@
+※ GUI
+
+· WindowBuilder
+
+- 기본 환경
+
+ 그냥 "테스트"로 실행해보기(완벽한 결과X)
+방법은 화면 - 마우스 오른쪽 버튼 - test/preview 클릭
+(일반적으로는 원래 하던 방법대로 실행)
+
+ "닫기 버튼 코딩" 없이도 잘 닫힌다.
+
+ 왼쪽 컴포넌트 클릭 후 드래그 앤 드롭으로 UI를 편리하게 만듬
+(필요시 컴포넌트 ctrl+c ctrl+v로 복사)
+
+ ctrl키 누른채로 여러 컴포넌트를 클릭하여 묶은 후 한꺼번에 이동하거나 삭제 가능
+
+ text 입력시 component에 직접 넣지 않고
+왼쪽에 있는 속성창 text에 넣어야 에러 없이 잘 들어간다.
+
+ 추후 wb 에디터가 잘 안타나나는 경우,
+.java - 마우스 오른쪽 - open with - window builder 로 열도록 한다.
+
+ (참고) WB에 속석에 값 넣는 두 가지 방법
+    
+	(1) 속성 창에 직접 입력
+	    ==> 속성 창에 입력으로 처리한다.
+
+	(2) 객체.속성 = 값
+	    ==> 속성 창으로 대신할 수 있다.
+	JTextField jt;		=> 글상자
+	jt.setText("ondal");	=> setter
+	jt.getText();		=> getter
+
+ (참고) 개발시 변수명 약속 (Camel casing)
+  버튼 : btn + Element name
+  라벨 : lbl + Element name

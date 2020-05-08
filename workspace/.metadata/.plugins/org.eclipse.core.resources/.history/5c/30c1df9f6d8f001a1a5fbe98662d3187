@@ -1,0 +1,15 @@
+package com.java.gui;
+
+import java.awt.Frame;
+
+public class winClosingClass extends Frame {
+	
+	public static void main(String[] args) {
+		
+		winClosingClass bc = new winClosingClass();
+		bc.setSize(500, 500);
+		bc.setTitle("closing window");
+		bc.setLayout(null); //no Layout
+		bc.setVisible(true);
+	}
+}

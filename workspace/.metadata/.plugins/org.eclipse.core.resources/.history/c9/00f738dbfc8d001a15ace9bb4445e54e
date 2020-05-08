@@ -1,0 +1,13 @@
+package com.java.file;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class ByteStreamArray {
+	//byte[] 단위로 처리
+	public static void main(String[] args) throws IOException {
+		FileInputStream f = new FileInputStream("D:/Java_Web_PM_Class_JB/aa.txt");
+		
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.java.gui;
+
+import java.awt.Frame;
+
+public class HelloGUI2 extends Frame {
+	
+	public static void main(String[] args) {
+		HelloGUI2 h2 = new HelloGUI2();
+	}
+}

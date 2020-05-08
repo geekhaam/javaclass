@@ -1,0 +1,60 @@
+* Package를 너무 많이 만들면 '클래스를 찾거나 로드할 수 없음' 등의 에러가 난다.
+  따라서, 너무 많은 패키지로 작업하지 않을 것을 권장한다.
+
+※ GUI
+
+- 화면에 창을 띄우기 위해서는 세가지 요소가 필요하다.
+    좌표(L, T), width, height
+
+- 띄운 창을 종료 시키기 위해서 awt는 shutdown 메소드를 구현해줘야 하지만,
+  swing의 경우 구현하지 않아도 닫을 수 있다.
+  (단, JVM까지 완전히 종료하고 싶은 경우에는
+   jcbc.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 를 추가한다.)
+
+
+· swing (extends JFrame)
+
+ JFrame
+	메뉴바
+		버튼, 글상자, ... => Component
+			Content Pane
+		* jdk1.5 이전에 반드시 content pane 사용
+		  이후 사용 안 하고 JFrame - 컴포넌트를 배치해도 됨
+		  (알아서 content pane 인식)
+
+- JButton
+- JPanel
+- JCheckBox
+- JRadioButton (ButtonGroup)
+- JListBox
+- JComboBox
+- JTextField (한줄)
+- JTextArea (여러줄)
+- JLabel
+
+- getContentPane().methods
+
+
+- event 처리 과정(implements ActionListner)
+
+  버튼이 이벤트에 해당된다는 표시 : addActionListner() => 버튼, 메뉴, 리스트
+  (참고) WindowEvent ==> 윈도우 최대화, 최소화 등 윈도우와 관련된 이벤트
+	MouseEvent  ==> 마우스 클릭, move, ...
+  버튼 누름(이벤트) - JVM - 이벤트 처리 메소드(event handler)
+				actionPerformed(ActionEvent e)
+
+
+- 배치 관리자 종류 (Layout)
+
+  FlowLayout : 왼쪽에서 오른쪽으로 배치, 오른쪽 공간이 없으면 아래로 자동 배치
+  FlowLayout(FlowLayout.LEFT, 10, 20); -> 왼쪽 정렬, 좌우 간격 10, 상하 간격 20
+
+  BorderLayout : 동, 서, 남, 북, 중앙 5개의 영역으로 나뉨
+  BorderLayout(30, 20); -> 좌우 간격 30, 상하 간격 20
+
+  GridLayout : 2차원 그리드로서 n x n으로 설정해주며, 왼쪽에서 오른쪽, 위에서 아래로 배치
+  GirdLayout(4, 3, 5, 50); -> 4 x 3 그리드에 좌우 간격 5, 상하 간격 5
+
+  CarLayout : 컴포넌트를 포개어 배치
+
+  Null : 레이아웃을 쓰지 않고 각 컴포넌트마다 수동으로 위치 설정

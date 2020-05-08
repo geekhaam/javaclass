@@ -1,0 +1,38 @@
+※ Collection
+
+· HashMap
+  - key, value 사용 / hashing 기법으로 빠른 검색
+  - hashing : key를 사용하여 hash function - hash code
+	      => 막 바로 value를 찾는다.
+  - 메소드
+	.put(key, value) : 값 추가
+	.get(key)	 : value 값 얻기
+	.remove(key)	 : 값 삭제
+	.values();	 : value 값만 모두 얻어와 Collection 형태로 받는다.
+			   (return type - Collection)
+	.keySet();	 : key 값만 얻어와 Set 형태로 받는다.
+			   (return type - Set)
+
+
+· Queue 인터페이스 --> 상속 받아 LinkedList
+  - FIFO : First In, First Out
+  - LILO : Last In, Last Out
+
+
+· Stack 인터페이스 
+  - FILO : Frist In, Last Out 
+  - LIFO : Last In, First Out
+
+	----		 ------
+	    |-----------|
+	     -----------
+
+  - recursive call 재귀 호출
+
+* overflow <-> underflow
+
+
+· Collection method
+  - sort()	: 오름차순 정렬
+  - reverse()	: 역전
+  - shuffle()	: 콜렉션 내 값 무작위로 섞기

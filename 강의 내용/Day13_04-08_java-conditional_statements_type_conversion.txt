@@ -1,0 +1,101 @@
+· 조건문
+
+- if 함수(메소드)
+
+  head, body
+
+  if(조건)      //head
+  { 	       //body //block
+	yes;   //statement(STMT)
+  } else {
+   	no;
+  }
+
+Q) 210은 3의 배수인가?
+
+Q) 변수 kab에 75가 있을 때, 변수가 3의 배수이면 "3의 배수"
+   5의 배수이면 "5의 배수", 3과 5의 동시 배수이면 "동시 배수"를 출력하는 프로그램을 작성하시오.
+
+Q) 비만도지수 BMI
+	BMI = 몸무게(kg) / 키(m)의 제곱
+
+   	BMI	30이상 비만
+		25~30 과체중
+		20~25 보통
+		20미만 저체중
+
+
+	      1) 사용자 정의 클래스
+	      2) 내장 클래스
+- Scanner ==> 내장 클래스
+		Scanner sc1 = new Scanner(System.in);
+		sc1.next() => 문자열
+		sc1.nextInt() => 정수
+		... 등 여러 자료형을 받을 수 있는 입력 메소드 존재
+
+- switch 조건문
+	switch (조건) {
+	case 값1 : 처리;		=> 값에는 문자열, 정수는 가능하지만 실수는 불가능하다.
+	 	   break;
+	case 값2 : 처리;
+		   break;
+	default : 처리;
+		  break;
+
+-----------------------------------------------------------------------------------
+
+· 형변환
+
+- 암시적(묵시적) 형변환
+  : 같은 타입의 작은 단위 자료형을 큰 단위 자료형으로 변환
+
+- 명시적 형변환
+  : 값으로 오는 변수 앞에 cast하여 자료형 변환
+
+- Boxing
+  : Stack 영역에 있는 값을 Heap 영역으로 넘겨줄 수 있다.
+	int ff = 3; //stack memory
+	Object gg = ff;
+
+- Unboxing
+  : Heap -> Stack
+	int hh = (int)gg;
+
+- 문자열 String
+  
+  String 타입을 비교시 == 를 사용할 경우, Stack에 저장된 참조변수를 비교하는 것이다.
+  따라서 String 변수의 값을 비교하려고 할 경우엔 equals() 메소드를 활용하여 비교한다.
+
+* Null Pointer Error
+
+  String ppp = null;
+  -> Stack영역에 참조변수는 생성되지만, Heap영역에 객체를 참조하지 않는다.
+  String qqq = "";
+  -> Stack영역에 참조변수가 생성되고, Heap영역에 빈문자열이 참조된 경우
+  System.out.println(qqq.length() > 0);
+  -> 빈 문자열 : 길이가 0인 문자열
+  System.out.println(ppp.length() > 0);
+  -> Null Pointer Error
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

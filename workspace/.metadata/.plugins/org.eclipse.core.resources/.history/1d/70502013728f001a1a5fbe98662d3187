@@ -1,0 +1,21 @@
+package com.java.gui;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class JButtonClass extends JFrame {
+	//창을 닫는 기능은 기본으로 설정되어 있다.
+	
+	JButton jb1 = new JButton("사과");
+	JButton jb2 = new JButton("배");
+	JButton jb3 = new JButton("감");
+	JButton jb4 = new JButton("귤");
+	JButton jb5 = new JButton("포도");
+	JButton jb6 = new JButton("자두");
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

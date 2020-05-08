@@ -1,0 +1,10 @@
+package com.java.gui;
+
+public class BaseComponentClass {
+
+	public static void main(String[] args) {
+		new BaseComponentClass();
+
+	}
+
+}

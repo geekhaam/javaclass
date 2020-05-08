@@ -1,0 +1,26 @@
+· 반복문
+
+- for 반복문
+
+	for(초기값; 목적지; 증가값) {
+		문장;
+	}
+
+
+- while 반복문
+
+	while(조건) {
+		문장;
+	}
+	flag 기법(무한 루프)
+
+	- break
+	- continue
+
+
+- do-while 반복문
+
+	do {
+		문장;
+	} while(조건);
+  -> do-while문은 메뉴 관련 기능에서 쓰인다.

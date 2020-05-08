@@ -1,0 +1,41 @@
+※ XMind	
+
+- ctrl + L 을 사용하여 토픽을 계속 만든 후
+- 설명 삽입은 상단 메뉴에서 삽입 - "독립토픽"으로 삽입
+- 배경색 등은 설명 하나를 꾸민후 마우스 오른쪽 - "스타일 복사"한 후
+  해당 독립 토픽에 놓고 마우스 오른쪽 - "스타일 붙여넣기"로 조정함
+
+
+* 무료 저작권 이미지 사이트 - pixabay.com
+
+-------------------------------------------------------------------------------------
+
+※ JDK
+
+- 컴파일 언어, 비컴파일 언어(interpreter)
+
+ c --> 영어 ------------> 기계어 --> 실행
+	     complier
+
+					jit complier = jitter
+		       aa.class		just-in-time compiler
+ aa.java ------------> byte code / jvm ----------------------> windows
+	   compiler					       linux
+							       unix (OS 환경에 제한을 받지 않는다.)
+			     jitter
+ aa.cs -------------> MSIL ----------> windows
+	CLR(Common Language Runtime)
+
+ .NET = ip address + network
+
+
+- 환경변수 설정
+
+- IDE : Eclipse
+
+- JAVA 구조
+
+Project Name
+	(Package)
+	Class
+	   Method(main)

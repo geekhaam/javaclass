@@ -1,0 +1,16 @@
+package com.java.file;
+
+import java.io.DataOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class ByteStreamPrimitiveType {
+
+	public static void main(String[] args) throws IOException {
+		FileOutputStream fos = new FileOutputStream("D:/Java_Web_PM_Class_JB/aa.txt");
+		DataOutputStream dos = new DataOutputStream(fos);
+		//기본 자료형을 스트림으로 출력하기 위한 객체 생성
+		//DataOutputStream은 도우미로 자료형 단위(int, long, char, ...)로 처리시 사용
+	}
+
+}

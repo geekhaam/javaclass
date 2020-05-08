@@ -1,0 +1,19 @@
+package com.java.gui;
+
+import javax.swing.JFrame;
+
+//JavaFX -> xml로 코딩 -> tool : SceneBuilder
+//수업 시간에 사용할 tool			: WindowBuilder
+
+class JFileChooserClass extends JFrame {
+	
+}
+
+public class JFileChooserMainClass {
+
+	public static void main(String[] args) {
+		new JFileChooserClass();
+
+	}
+
+}

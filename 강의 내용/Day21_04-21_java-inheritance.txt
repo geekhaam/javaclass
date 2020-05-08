@@ -1,0 +1,26 @@
+※ 상속 Inheritance
+
+* 자료의 형변환
+
+ 명시적 형변환
+int aa = 30;
+short bb = (short)aa;
+
+ 암시적 형변환
+short cc = 55;
+int dd = cc;
+
+
+- 객체의 형변환
+  : 부모에 자녀의 것, 자녀에 부모의 것을 넣는 것
+
+
+- 다중 상속
+
+다중 상속이 불가능한 이유 => Diamond Problem
+따라서, interface를 활용한다.
+
+
+- interface
+다중 상속 해결, 함수의 원형(상부 구조), 협업
+특징 : 메소드는 선언만, 구현 X (child 클래스에서 반드시 구현)

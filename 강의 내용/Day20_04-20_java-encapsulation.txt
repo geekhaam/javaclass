@@ -1,0 +1,52 @@
+※ Encapsulation
+
+· Object Generator
+
+alt + shift + s => source
+- Generate Getters and Setters
+
+: Generator를 통해 Getter와 Setter를 자동으로 생성
+
+- Object의 toString() 메소드를 overriding하여
+  문자열로 return하여 사용하는 경우 toString()을 생략하고
+  객체의 변수만을 사용하여 toString()의 return 값을 받아올 수 있다.
+
+
+- 객체의 Life Cycle
+
+main() - start
+
+new : 객체 생성
+default 생성자(constructor) : 초기치
+
+	new BBang()	bbang= ""  price = 0
+
+ 다양한 로직
+
+소멸자(destructor) 사동 : 객체 정리
+
+main() - end 	=> 객체 자동 소멸 garbage collector
+* 수동으로 객체를 소멸시키는 메소드 : dispose()
+
+** C언어 : malloc() calloc()	=> 소멸시키는 메소드 : free
+   C++				=> delete p, p=NULL;
+
+*** 객체를 지우지 않으면
+	1) memory leak
+    객체를 잘못 지우게 되면
+	2) dangling pointer problem 발생
+
+- Encapsulation 문제
+
+Q) 클래스 속성으로 고객명, 핸드폰기종, 핸드폰가격, 구입처를 만든 후 해당 클래스를 사용하여
+   5개 정도의 객체를 만든 다음 (생성자, getter, setter도 만든다.)
+   toString()을 사용하여 다음과 같이 출력하는 프로그램을 작성하시오
+
+홍실동 고객님의 핸드폰에 대한 정보는 다음과 같습니다.
+고객님의 아이폰xs의 가격은 150만원이고 구입처는 종로지점에서 구입하셨네요.
+
+이도령 고객님의 핸드폰에 대한 정보는 다음과 같습니다.
+고객님의 갤럭시s8의 가격은 90만원이고 구입처는 강남지점에서 구입하셨네요.
+
+단, 객체 입력의 예는 다음과 같다.
+	홍길동	아이폰xs	1500000	종로지점

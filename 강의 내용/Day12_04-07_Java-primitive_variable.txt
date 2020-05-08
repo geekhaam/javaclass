@@ -1,0 +1,132 @@
+※ Java
+
+- Java를 만든이 : gosling 외 3명
+- IoT(Internet of Things) 제어 목적으로 탄생
+
+- Java Structure
+
+	Package (name-space)
+	Class (interface, enumeration, ...)
+		Member - Field(속성)
+			 Method(메소드)
+
+- C# Structure
+
+	Using (name-space)
+	Class (interface, enumeration, ...)
+		Member - Field(속성)
+			 Method(메소드)
+
+- 프로그래밍 언어
+
+	   Dennis Ritche	     Java
+  BCPL - B - C언어   -   C++   -      
+		  Bjarne Stroustrup  C#
+
+
+- 자료형 Int
+
+  int
+  			2^31 = 2147483648 (sign bit를 제외한 31개 bit)
+ sign bit		-2^31 ~ 2^31-1(0 때문에)
+  +[0 /		|	|	|	]
+  -[1 /		|	|	|	]
+   1bit + 7bit	+  8bit	+  8bit	+  8bit	  = 4Byte
+
+-1은 음수 중에 제일 큰 수이기 때문에, 11111111,11111111,11111111,11111111 이다.
+따라서 제일 작은수인 -2147483648 = 10000000,00000000,00000000,00000000
+
+int 자료형 21483647과 1을 더하면
+  01111111,11111111,11111111,11111111
++ 00000000,00000000,00000000,00000001
+= 10000000,00000000,00000000,00000000 => -2147483648 이다.
+
+
+- Memory 구조
+
+  heap memory
+  static memory
+  stack memory (int aa..) : 크기가 한정, 조건이 맞으면 지워짐 (primitive variable이 속한 영역)
+  code memory
+
+
+- 기본 자료형(primitive variable) => Stack Memory 영역에 속한다.
+
+ <정수>
+  int	정수, 4byte (-2147483648 ~ 2147483647)
+  short 정수, 2byte (-32768 ~ 32767)
+  byte	정수, 1byte (-128 ~ 127)
+  long	정수, 8byte (-920경 ~ 920경) long dd = 123456498745466465516L;
+					     (long형 정수는 뒤에 L을 붙인다.)
+
+ <실수>
+  double 실수, 8byte (배정도 실수를 기억할 때)
+	 123.45 -> 0.12345 * 10^3 --> 0.12345, 3
+		-1.7E308 ~ 1.7E308
+	 e : exponent (지수)
+		-1.7 * 10^308 ~ 1.7 * 10^308
+		double ee=378.75;
+  float  실수, 4byte (단정도 실수를 기억할 때, 0.123456)
+		-3.4 * 10^38 ~ 3.4 * 10^38
+		pi = 3.141592....
+			float ff = 3.14f; (float형 실수는 뒤에 f를 붙인다.)
+
+ <문자상수>
+  char 한 문자, 2byte, 작은따옴표
+		char hh = '가';
+		char yy = 'b';
+  - int 자료형으로 캐스팅하면 아스키코드 표의 십진수 값을 얻어낼 수 있다.
+
+ <논리>
+  boolean 논리, 1byte
+	True and True	True
+	boolean gg = false;
+
+
+- Heap Memory 영역에 속하는 자료형
+
+ <문자열>
+  String 문자열(여러문자), 큰따옴표
+		String str = "ondal";
+ 		Heap 영역 1000번 주소에 "ondal" 저장
+		Stack 영역 str은 1000번 주소로 저장 (참조변수)
+
+- Java에서 자료형의 최소값, 최대값을 구하려면
+	각 자료형의 Wrapper 타입에서 MAX_VALUE, MIN_VALUE를 확인하면 된다.
+
+*  Eclipse에서 Java 파일 저장은 컴파일이니, 저장 후 실행하는 습관을 들이자.
+** 문제 푸는 방법
+  	문제 분석 - 순서도(flowchart) - coding - run - 결과
+		에러 중에서 제일 첫번째 에러를 찾음 - run
+				syntax error
+				logic error
+
+- 연산자
+   산술 연산자 : +, -, *, /, %(나머지)
+
+	정수 / 정수 = 정수
+	정수 / 실수 = 실수
+	실수 / 정수 = 실수
+	실수 / 실수 = 실수
+
+   Q) 달에서의 몸무게는 지구에서의 몸무게의 17%라고 한다.
+      지구에서의 몸무게가 78일 때 달에서의 몸무게를 구하시오.
+
+   관계 연산자 : >, <, >=, <=, ==, !=
+   논리 연산자 : &&, ||, ^, !
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

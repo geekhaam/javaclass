@@ -1,0 +1,14 @@
+package com.java.gui;
+
+import javax.swing.JFrame;
+
+public class JButtonClass extends JFrame {
+	//창을 닫는 기능은 기본으로 설정되어 있다.
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.java.gui;
+
+import javax.swing.JFrame;
+
+public class JRadioButtonClass extends JFrame {
+	
+	public static void main(String[] args) {
+		new JRadioButtonClass();
+
+	}
+
+}

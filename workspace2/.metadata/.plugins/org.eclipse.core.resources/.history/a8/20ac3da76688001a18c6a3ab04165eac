@@ -1,0 +1,26 @@
+package com.jdbc.main;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import com.jdbc.dao.TelInfoDAO;
+import com.jdbc.vo.TelInfoVO;
+
+public class Test {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		TelInfoDAO dao = new TelInfoDAO();
+		
+		ArrayList<TelInfoVO> result = dao.getAllInfo();
+		
+		for(int i=0; i<result.size(); i++) {
+			System.out.println((i+1) + "번째 등록");
+			System.out.println("ID : " + result.get(i).getId());
+			System.out.println("이름 : " + result.get(i).getName());
+			System.out.println("전화번호 : " + result.get(i).getTel());
+			System.out.println("등록 날짜 : " + result.get(i).getD());			
+		}
+
+	}
+
+}

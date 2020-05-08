@@ -1,0 +1,13 @@
+package com.java.file;
+
+public class ByteStream {
+
+	public static void main(String[] args) {
+		//FileInputStream, FileOutputStream
+		//read() : 1Byte 단위
+		//read(array) : 배열 단위
+		//write() 도 마찬가지
+
+	}
+
+}

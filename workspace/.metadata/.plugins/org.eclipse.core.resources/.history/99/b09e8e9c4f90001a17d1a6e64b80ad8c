@@ -1,0 +1,16 @@
+package com.java.gui;
+
+import javax.swing.JFrame;
+
+class JColorChooserClass extends JFrame {
+	
+}
+
+public class JColorChooserMainClass {
+
+	public static void main(String[] args) {
+		new JColorChooserClass();
+
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.jdbc.controller;
+
+import java.sql.Connection;
+
+public class TelInfoDBConn {
+	
+	private Connection conn;
+
+	public Connection getConnection() {
+		return conn;
+	}
+}

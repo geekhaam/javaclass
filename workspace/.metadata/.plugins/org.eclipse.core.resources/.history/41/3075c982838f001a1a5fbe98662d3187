@@ -1,0 +1,19 @@
+package com.java.gui;
+
+import javax.swing.ButtonGroup;
+import javax.swing.JFrame;
+import javax.swing.JRadioButton;
+
+public class JRadioButtonClass extends JFrame {
+	
+	public JRadioButtonClass() {
+		private ButtonGroup bg;
+		private JRadioButton jradio1, jradio2, jradio3;
+	}
+	
+	public static void main(String[] args) {
+		new JRadioButtonClass();
+
+	}
+
+}

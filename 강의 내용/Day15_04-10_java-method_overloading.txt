@@ -1,0 +1,42 @@
+· 메소드 Method
+
+1) 메소드 1형식
+	public static void method() {
+	}
+	public static void main(Stringp[] args) {
+		method();
+	}
+
+- 메소드 호출문 / 메소드 정의문
+
+
+2) 메소드 2형식
+	public static void method(parameter) {
+	}
+	public static void main(String[] args) {
+		method(arguments);
+	}
+
+3) 메소드 3형식
+	public static returnType method(parameter) {
+		return result;
+	}
+	public static void main(String[] args) {
+		returnType result = method(arguments);
+	}
+
+- 다형성
+1) Overloading	(중복)
+2) Overriding	(재정의)
+
+- 메소드 중복 method overloading
+  : 가독성을 높이기 위해 메소드 이름을 같게
+
+  조건 1) 메소드 이름이 동일해야 한다.
+      2) 인자의 타입이 다르거나 인자의 수가 달라야 한다.
+
+
+· 배열 List
+
+	int[] name = new int[5]
+	-> 길이가 5인 name 배열

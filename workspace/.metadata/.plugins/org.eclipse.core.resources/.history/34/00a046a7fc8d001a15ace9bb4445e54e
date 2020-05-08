@@ -1,0 +1,9 @@
+package com.java.file;
+
+public class ByteStreamArray {
+
+	public static void main(String[] args) {
+		//byte[] 단위로 처리
+	}
+
+}

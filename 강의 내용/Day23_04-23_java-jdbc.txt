@@ -1,0 +1,24 @@
+· JDBC
+
+- Statement  vs Preparedstatement
+
+ Statement
+1) 단일로 사용될 때 빠른 속도를 지닌다.
+2) 쿼리에 인자를 부여할 수 없다.
+3) 매번 컴파일을 수행해야 한다.
+
+ PreparedStatement
+1) 쿼리에 인자를 부여할 수 있다.
+2) 처음 프리컴파일 된 후, 이후에는 컴파일을 수행하지 않는다.
+3) 여러번 수행될 때 빠른 속도를 지닌다.
+
+
+- VO, DTO, DAO
+
+VO : value object, DTO : data transfer object
+DAO : data access object
+
+
+ DAO (jdbc, MyBatis, hibernate, jdbcTemplate)
+ - 접속을 위한 객체 get
+ - 검색, 삽입, 삭제, 수정 메소드

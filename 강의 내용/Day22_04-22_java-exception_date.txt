@@ -1,0 +1,27 @@
+· 상속 Inheritance
+
+- 추상화(abstraction)
+   가독성, 다양성(polymorphism)
+   추상 메소드가 있으면 추상 클래스가 된다.
+
+
+- interface, abstract 모두 상속을 전제로 한다.
+
+
+· 예외 처리 Exception
+
+  예외 : Exception (내장 클래스)
+  try {}	: 예외 가능
+  catch {}	: 예외시 처리
+  finally {}	: 무조건 처리
+
+
+- throw	  vs   throws
+  
+  throw  : 예외일 경우 지정해둔 예외로 보낸다
+  throws : rethrow
+
+
+· Date (java.util.Date)
+
+객체를 생성후, 참조 변수를 출력하면 시스템 상의 현재 날짜가 출력된다. (toString())

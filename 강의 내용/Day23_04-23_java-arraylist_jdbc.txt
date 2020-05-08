@@ -1,0 +1,71 @@
+
+★ 과제 : Collection 관련 클래스들 정리하여 월요일까지 제출 ★
+
+· ArrayList
+
+- Array : 고정 길이 배열
+	  상대적으로 처리 속도가 빠르다.
+	  one data type
+
+- Collection : 가변 길이 배열
+	       상대적으로 처리 속도가 느리다.
+	       multi data type
+
+		Collection --- set
+			       list --- ArrayList, vector
+				       map
+
+- generic
+  : 배열과 컬렉션의 장점을 따서 만들었다. (가변 길이 + one data type)
+    ArrayList<DataType> arr = new ArrayList<DataType>();
+
+
+* int vs Integer
+
+  int는 null 사용 불가, Integer는 가능
+  int는 연산 가능, Integer는 unboxing해야 산술 연산 가능
+  sql의 null과 연동시 Integer와 연동
+
+** boxing, unboxing
+
+auto boxing은
+ int a = 30;
+ Integer b = a;
+boxing은
+ Integer b = new Integer(a);
+
+auto unboxing은
+ int c = Integer b;
+unboxing은
+ int d = db.intValue();
+
+(참고) Integer.parseInt()  vs  Integer.valueOf()
+      int값 반환, 연산 가능	      Integer 반환, 연산 불가
+
+※ JDBC (Java DataBase Connectivity)
+
+	oracle 10g : ojdbc14.jar : 드라이버
+	oracle 11g : ojdbc6.jar
+	       18c
+
+- 드라이버 위치 정하는 2가지 방법
+  1) jdk, jre 쪽에
+  2) 이클립스에서 설정
+
+
+- ojdb6.jar 다운로드
+
+  1) 오라클 설치한 곳에 이미 있다.
+     (예) C:\oraclexe\app\oracle\prdouct\11.2.0\server\jdbc\lib
+  2) 오라클 사이트 검색에서 jdbc 입력 후 버전을 찾아 다운로드
+
+- 드라이버 설정
+
+  1) ojdbc6.jar 드라이버를 Java 아래에 넣는다.
+     예) C:\Program Files\Java\jre1.8.0_241\lib\ext
+
+     필요시 추가 위치는
+     C:\program...\Java\jdk\jre\lib\ext
+
+  2) 이클립스에서 add external jar를 사용
+      프로젝트 - java build path - add external jar

@@ -1,0 +1,64 @@
+package com.java.file;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class TextViewer {
+
+	public static void main(String[] args) throws IOException {
+		// 1. Read
+		//문자열 단위로 file read
+		//FileReader fr = new FileReader("test.txt"); => Open
+		FileReader fr = new FileReader("D:/Java_Web_PM_Class_JB/test.txt");
+		//input, output stream이 보이면 Byte Stream
+		//reader, writer가 보이면 Character Stream
+		
+		BufferedReader br = new BufferedReader(fr);
+		//적당한 단위로 BufferedReader에 저장 후 사용 (한번에 꺼내거나 한 개 단위로 꺼내는 방법보다 효율성 및 속도 UP)
+		
+		String s;
+		//file read - 화면 write // Byte readInt...
+		
+		ArrayList<String> arr = new ArrayList<String>();
+		while((s = br.readLine()) != null) { //한 줄의 끝
+								//한 글자의 끝 : eof, -1
+			System.out.println(s);
+			arr.add(s);
+		}
+		br.close();
+		fr.close();
+		
+		
+		//2. Writer
+		//Scanner 대신 file 형식 사용 : 키보드 입력
+		/*InputStreamReader is = new InputStreamReader(System.in);
+		BufferedReader br1 = new BufferedReader(is);*/
+		BufferedReader br1 = new BufferedReader(new InputStreamReader(System.in));
+		
+		//일반적으로 출력할 때, 아래 세 개의 객체를 모두 사용한다.
+		FileWriter fw = new FileWriter("D:/Java_Web_PM_Class_JB/test.txt", true);
+		BufferedWriter bw = new BufferedWriter(fw);
+		PrintWriter pw = new PrintWriter(bw, true);
+		
+		PrintWriter pw = new PrintWriter
+				(new BufferedWriter(new FileWriter("D:/Java_Web_PM_Class_JB/test.txt", true)))
+			//println() 사용 가능
+		/* true는 생략 가능하며, true가 있으면 autoflush 기능이 있음을 의미한다.
+		flush : 출력 버퍼에 모여있는 내용을 스트림으로 보내는 것
+		PrintWriter는 있으나 Reader는 없다. */
+		
+		String newText = null;
+		arr.add(newText);
+		
+	}
+
+}

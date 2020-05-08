@@ -1,0 +1,37 @@
+※ GUI
+
+* Basic(GW-Basic) : Beginner's All-purpose Symbolic Instruction Code
+  => VB(Visual Basic) - Microsoft
+     => VBA(Visual Basic for Application) -> Excel (아직까지 많이 쓰이는)
+  (참고) Excel 보다 오래된 스프레드시트 : lotus 1-2(to)-3
+
+
+- JColorChooser
+
+  RGB : Red, Green, Blue - 빛의 삼원색
+  0 ~ 255, 0 ~ FF
+    FFFFFF : white
+    ffff00 : yellow
+    000000 : black
+  투명도, 불투명도(alpha)
+
+
+· WindowBuilder(Swing) 
+  	<--> ScencBuilder(JavaFx)(.fxml)
+- UI를 편리하게 만들어주는 Tool
+- 디자인을 해주면 자바 소스가 자동 생성(gui의 Swing 중심)
+  필요시 직접 입력 수정 가능하다.
+  
+- WindowBuilder 설치
+  http://download.eclipse.org/windowbuilder/WB/integration/4.8/
+
+- 이클립스 help-install new software로 가서
+  work-with에 복사한 url paste 후 add 클릭
+  이름은 적당히(wb4.8photon)
+
+-- Window builder에 check하고 next, accept, finish
+
+- 실행
+  파일-new-...other-window builder-Swind Desginer-Application Window 순으로 만든다.
+  화면은 2개의 화면이 탭으로 나타나는데
+  	design탭, source탭으로 구성된다.

@@ -1,0 +1,40 @@
+※ File
+
+- Stream : 	Byte Stream / Character Stream
+		(1Byte 단위로 전송하는 것을 Byte Stream,
+		 문자열 단위로 전송하는 것을 Charater Stream)
+		* 비정형 데이터의 경우 Byte Stream으로 전송
+
+		Input / Output Stream
+		(File을 중심으로 File에서 꺼내는건 Input,
+		 		 File에 넣는건 Output)
+
+* ACD see : viewer application (메모장 파일 - text viewer)
+				메모장 파일에서 input, 화면에 output
+
+- File 처리 로직 (text viewer)
+
+  open
+   read
+   화면출력
+  close
+
+
+- flush : 출력 버퍼에 모여있는 내용을 스트림으로 보내는 것
+
+
+※ GUI
+
+Graphic User Interface
+
+- AWT(Abstract Window Toolkit) : system 중심, 시스템 gui의 영향을 받으므로
+				 화면 출력에 일관성이 없다. 중량 component
+				 (import java.awt.*;)
+
+- SWING : JVM 중심, 화면 출력에 일관성이 있다. 경량 component
+	  (J가 접두사, import javax.swing.*;)
+
+- 이벤트(event)
+  - 리스너(listner)
+	extends  Frame	implements ActionListner
+		 JFrame

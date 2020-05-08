@@ -1,0 +1,16 @@
+package com.java.gui;
+
+import javax.swing.JFrame;
+
+public class JCheckboxMainClass extends JFrame {
+
+	public static void main(String[] args) {
+		JCheckboxMainClass jcbc = new JCheckboxMainClass();
+		jcbc.setTitle("Check Box");
+		jcbc.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		jcbc.setSize(500, 500);
+		jcbc.setVisible(true);
+
+	}
+
+}
