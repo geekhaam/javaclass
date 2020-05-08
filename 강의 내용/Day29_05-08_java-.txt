@@ -35,3 +35,26 @@
  (참고) 개발시 변수명 약속 (Camel casing)
   버튼 : btn + Element name
   라벨 : lbl + Element name
+
+- 버튼에 이미지 넣기
+
+(1) C, D드라이브 폴더에 있는 이미지를 넣으려면 absolute path를 선택한다.
+    방법은 desgin 왼쪽 속성 창에서
+    아이콘-...버튼-absolute path...-browse-이미지 선택
+	- 속성창 text에는 "이미지"라는 글자 입력
+	- 버튼 크기를 적당히 조절하면 이미지와 글씨가 잘 들어가 있는 것을 볼 수 있다.
+
+(2) 만일 이클립스 src 아래에 만든 images 패키지에서 이미지를 가져와 넣으려면
+    아이콘-...버튼-classpath resource를 선택한다.
+
+취소는 옵션에서 no image 선택
+
+
+- JTextArea에 스크롤바 만들기
+
+ 먼저 JScrollPane을 올리고,
+그 위에 JTextArea를 바로 올리면 viewport 개념으로 크기가 일치한다.
+
+(소스 참고) scrollPane.setViewportView(textArea);
+ 실행시 JtextArea에 글자를 계속 넣어보고 한줄 길게 넣어보면
+스크롤바가 both(가로줄 및 세로줄)로 생긴다.
