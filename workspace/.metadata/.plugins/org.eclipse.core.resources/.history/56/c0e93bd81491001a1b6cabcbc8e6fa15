@@ -1,0 +1,24 @@
+package com.java.review;
+
+public class Reveiw {
+
+	public static void main(String[] args) {
+		/* Q) 상품 이름, 가격, 입고량과 출고량 객체 및 컬렉션에 넣고 결과를 출력하는 자바 프로그램을 작성하시오
+		 * <조건>
+		 * 1. 클래스명 Market 각각의 필드명은
+		 * sangpum_name;
+		 * sangpum_price;
+		 * int sangpum_in;
+		 * int sangpum_out;
+		 * 2. 출력용 toString 작성
+		 * 3. 우유는 getter/setter로 입력후 toString() 출력
+		 * 빵은 생성자 사용 입력후 toString() 출력
+		 * 4. 객체의 생성자 등을 활용하여 컬렉션에 객체 5개 정도 추가로 넣은 후
+		 * getter/setter로 전체 내용 출력
+		 * 5. 상품의 입고량에서 출고량을 뺀 값이 출고량보다 큰 품목의 상품명을 모두 출력하시오
+		 * 6. 가격을 입력받아 가격이 10000이상인 상품명 출력
+		 */
+
+	}
+
+}
