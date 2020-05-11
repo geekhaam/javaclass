@@ -1,0 +1,28 @@
+package com.java.wb;
+
+import java.awt.Button;
+import java.awt.Dimension;
+import java.awt.Rectangle;
+import java.awt.Robot;
+import java.awt.image.BufferedImage;
+
+import javax.swing.JFrame;
+
+class CaptureClass extends JFrame{
+	
+	private Button b1 = new Button("전체화면 캡쳐");
+	Robot robot1; //키보드, 마우스 제어
+	Dimension towWin1; //컴포넌트의 너비 - 높이
+	Rectangle rect1;
+	BufferedImage bImage;
+	
+}
+
+public class CaptureMainClass {
+
+	public static void main(String[] args) {
+		CaptureClass cc = new CaptureClass();
+
+	}
+
+}

@@ -1,6 +1,7 @@
 package com.java.review;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 class Market {
 	//1.
@@ -63,8 +64,8 @@ class Market {
 
 public class Reveiw {
 	
-	public static String biggerThanMilli(Market m) {
-		if(m.getSangpum_price() >= 10000) {
+	public static String biggerThanMil(Market m) {
+		if(m.getSangpum_price() >= 1000) {
 			return m.getSangpum_name();
 		} else {
 			return null;
@@ -86,7 +87,7 @@ public class Reveiw {
 		 * 4. 객체의 생성자 등을 활용하여 컬렉션에 객체 5개 정도 추가로 넣은 후
 		 * getter/setter로 전체 내용 출력
 		 * 5. 상품의 입고량에서 출고량을 뺀 값이 출고량보다 큰 품목의 상품명을 모두 출력하시오
-		 * 6. 가격을 입력받아 가격이 10000이상인 상품명 출력
+		 * 6. 가격을 입력받아 입력 받은 가격보다 가격이 큰 상품명 출력
 		 */
 		
 		Market milk = new Market();
@@ -98,7 +99,7 @@ public class Reveiw {
 		Market bread = new Market("빵", 5000, 400, 200);
 		
 		//3.
-		System.out.println("---3. toString() 활용 출력---");
+		System.out.println("---문제3. toString() 활용 출력---");
 		System.out.println(milk + "\n");
 		System.out.println(bread);
 		
@@ -130,11 +131,14 @@ public class Reveiw {
 		
 		
 		//6.
-		System.out.println("\n---문제6. 가격이 10000 이상인 상품---");
+		System.out.println("\n---문제6. 가격이 입력 받은 가격 이상인 상품---");
+		Scanner sc = new Scanner(System.in);
+		System.out.print("가격을 입력하세요 : ");
+		int price = Integer.parseInt(sc.next());
+		
 		for(Market m : arr) {
-			String result = biggerThanMilli(m);
-			if(result != null) {
-				System.out.println(result);
+			if(m.getSangpum_price() > price) {
+				System.out.println(m.getSangpum_name());
 			}
 		}
 	}

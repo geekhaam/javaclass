@@ -1,0 +1,29 @@
+※ WindowBuilder
+
+- JToolbar
+(JToolbar에 버튼 넣어 이벤트 만들기)
+ JToolbar를 desgin에 올리고 버튼을 하나씩 그 안에 넣는다.
+
+ 방법으로는 JButton을 드래그 드롭 후 속성창 icon에 classpath를 선택하여
+color.png를 넣고 text 부분의 new button 글자를 삭제한다.
+필요시 JToolbar의 행을 약간 늘려 크기를 맞춘다.
+
+
+- Capture GUI 만들기 (전체 화면)
+
+필요 라이브러리 :	Robot - 키보드, 마우스 제어
+		Dimension - 컴포넌트의 너비, 높이
+		= Toolkit.getDefaultToolkit().getScreenSize()
+		Rectangle
+		BufferedImage
+
+- Timer 라이브러리
+
+Timer t1 = new Timer();
+
+t1.schedule(new TimerTask() {
+	public void run() { //run()은 추후 Thread에서 배운다. 
+		//여기서 주기적으러 반복
+	} //run-end
+}, 0, 250); //schedule-end
+=> 지금으로부터 0초 후에, 250ms 주기로 반복

@@ -54,7 +54,20 @@
 
  먼저 JScrollPane을 올리고,
 그 위에 JTextArea를 바로 올리면 viewport 개념으로 크기가 일치한다.
-
 (소스 참고) scrollPane.setViewportView(textArea);
+
  실행시 JtextArea에 글자를 계속 넣어보고 한줄 길게 넣어보면
 스크롤바가 both(가로줄 및 세로줄)로 생긴다.
+
+
+- JListBox에 스크롤바 만들기
+ scrollPane을 놓고 그 위에 JList를 놓는다.
+
+ selection을 선택
+ 예) SINGLE_SELECTION
+
+ visible rowcount를 선택
+ 예) 5개
+
+ 이벤트에서 listSelection - valueChanged 선택
+

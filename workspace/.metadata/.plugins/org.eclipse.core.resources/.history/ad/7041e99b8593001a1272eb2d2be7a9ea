@@ -1,0 +1,27 @@
+package com.java.wb;
+
+import java.awt.Button;
+import java.awt.TextField;
+import java.util.Timer;
+
+import javax.swing.JFrame;
+
+class EDisplay extends JFrame {
+	
+	static int sw = 0;
+	static String s = "				I LOVE YOU";
+	Timer t = new Timer();
+	
+	//GUI
+	private Button b1 = new Button("Ω√¿€");
+	private Button b2 = new Button("≥°");
+	private TextField tf = new TextField();
+}
+
+public class ElectronicDisplay {
+
+	public static void main(String[] args) {
+		
+		new EDisplay();
+	}
+}

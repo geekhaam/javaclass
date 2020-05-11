@@ -79,6 +79,5 @@ public class HelloWB extends JFrame {
 		//textArea.setCaretPosition(textArea.getText().length()); -> 마지막에
 		textArea.append("Hello Scroll bar");
 		
-		
 	}
 }

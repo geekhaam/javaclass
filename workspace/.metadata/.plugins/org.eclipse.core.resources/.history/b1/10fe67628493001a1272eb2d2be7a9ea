@@ -1,0 +1,13 @@
+package com.java.wb;
+
+class EDisplay {
+	
+}
+
+public class ElectronicDisplay {
+
+	public static void main(String[] args) {
+		
+		new EDisplay();
+	}
+}

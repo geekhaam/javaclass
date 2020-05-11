@@ -1,0 +1,20 @@
+package com.java.wb;
+
+import java.awt.Button;
+
+import javax.swing.JFrame;
+
+class CaptureClass extends JFrame{
+	
+	private Button b1 = new Button("전체화면 캡쳐");
+	
+}
+
+public class CaptureMainClass {
+
+	public static void main(String[] args) {
+		CaptureClass cc = new CaptureClass();
+
+	}
+
+}
