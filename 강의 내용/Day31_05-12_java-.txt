@@ -1,0 +1,37 @@
+※ 프로젝트
+
+· SDLC(Software Developement Life Cycle) 소프트웨어 개발 생명 주기
+  => 프로젝트 개발 순서
+
+  요구사항 확인 - 분석 - 설계 - 구현(프로그램 작성) - 테스트 - 유지 보수
+
+  기획자 - 화면 설계 - 디자이너 - publisher(front-end 개발자)
+  - back-end 개발자
+
+- 문서화 작업
+  1. 개발계획서
+  2. 화면설계서 + 기능명세서(description)
+
+
+· 화면 설계 도구 (기획 단계의 UI)
+
+ 카카오 오븐(무료, 설치 없이 가입 후 온라인 사용)
+	 유사 : powermockup
+
+- HTML5 기반 웹/앱 프로토타이핑 툴로 무료
+- 웹, 블로그 시안 등을 편리하게 만들도록 도와주며 프로토타입, mock-up을
+  쉽고 빠르게 작성할 수 있다.
+- 마치 웹앱 형태로 모바일 폰으로도 실행할 수 있다.
+  방법으로는 웹테스트-QR Code/URL 누른 후 폰의 QR code reader로 찍는다
+
+(참고)	wireframe : 단순 디자인 형식으로 개발자가 어떤 식으로 개발할지를 알려준다.
+	mockup : 완성 평가를 위한 실물 크기의 모형
+	prototype : user interface simulation
+		    즉, 일부 사용 기능이 추가되어 실제에 가깝게 테스트 가능한 것
+
+(참고) 네이티브(native)앱
+      웹(web)앱
+	- appspresso, jQuery Moblie
+
+- 프로젝트 안내
+기간 : 2020년 5월 12일 ~ 5월 26일

@@ -1,0 +1,29 @@
+package com.java.thread;
+
+public class ThreadSyncMainClass implements Runnable {
+	
+	private String name;
+	
+	public ThreadSyncMainClass() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public ThreadSyncMainClass(String name) {
+		super();
+		this.name = name;
+	}
+	
+	public void run() {
+		
+	}
+
+	public static void main(String[] args) {
+		ThreadSyncMainClass smc1 = new ThreadSyncMainClass();
+		
+		ThreadSyncMainClass smc2 = new ThreadSyncMainClass();
+		
+		
+
+	}
+
+}

@@ -1,0 +1,22 @@
+package com.java.thread;
+
+class JoinThread extends Thread {
+	
+	public void run() {
+		System.out.println("RUN THREAD");
+	}
+}
+
+public class JoinThreadClassMain {
+
+	public static void main(String[] args) throws InterruptedException {
+		JoinThread tc = new JoinThread();
+		tc.start();
+		
+		System.out.println("START THREAD");
+		tc.join();
+		System.out.println("JOIN THE THREAD");
+
+	}
+
+}

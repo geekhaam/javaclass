@@ -1,0 +1,38 @@
+package com.java.thread;
+
+class Love implements Runnable {
+	private String love;
+	
+	public Love() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Love(String love) {
+		super();
+		this.love = love;
+	}
+
+	public void run() {
+		System.out.println(love);
+		try {
+			Thread.sleep(300);
+		} catch(InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+}
+
+public class LoveThread {
+
+	public static void main(String[] args) {
+		Love loveGer = new Love("Ich Liebe Dich");
+		Love loveKor = new Love("»ç¶ûÇÕ´Ï´Ù");
+		
+		Thread tGer = new Thread(loveGer);
+		Thread tKor = new Thread(loveKor);
+		
+		tGer.start();
+		tKor.start();
+	}
+
+}

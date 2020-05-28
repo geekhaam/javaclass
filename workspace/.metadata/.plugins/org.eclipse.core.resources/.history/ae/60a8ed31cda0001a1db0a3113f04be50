@@ -1,0 +1,47 @@
+package com.java.thread;
+
+import java.awt.Frame;
+
+public class ThreadSyncMainClass extends Frame {
+	
+	private String name;
+	private static ThreadSyncClass tsc1 = new ThreadSyncClass();
+			//ThreadSyncClass는 synchronized할 클래스
+	public ThreadSyncMainClass() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public ThreadSyncMainClass(String name) {
+		super();
+		this.name = name;
+	}
+	
+	public void run() {
+		if(name.equals("준범")) {
+			try {
+				tsc1.kaja("안녕");
+			} catch(InterruptedException e) {
+				// TODO: handle exception
+				e.printStackTrace();
+			}
+			if(name.equals("정구")) {
+				try {
+					tsc1.kaja("하이");
+				}catch (InterruptedException e) {
+					// TODO: handle exception
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		ThreadSyncMainClass smc1 = new ThreadSyncMainClass("준범");
+		ThreadSyncMainClass smc2 = new ThreadSyncMainClass("정구");
+		
+		smc1.start();
+		smc2.start();
+
+	}
+
+}

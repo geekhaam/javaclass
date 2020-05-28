@@ -18,7 +18,6 @@ import java.awt.event.MouseEvent;
 public class oneWindow extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -41,29 +40,10 @@ public class oneWindow extends JFrame {
 	 */
 	public oneWindow() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 1280, 960);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		JButton btnNewButton = new JButton("\uC0C8\uCC3D \uC804\uD658");
-		btnNewButton.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				dispose(); //현재 창 해제 //프레임을 닫는 것
-				setVisible(false); //현재 창 안 보이게
-				new twoWIndow().setVisible(true);
-			}
-		});
-		btnNewButton.setFont(new Font("나눔스퀘어", Font.PLAIN, 16));
-		btnNewButton.setBounds(159, 50, 97, 47);
-		contentPane.add(btnNewButton);
-		
-		textField = new JTextField();
-		textField.setBackground(new Color(240, 230, 140));
-		textField.setBounds(145, 122, 126, 39);
-		contentPane.add(textField);
-		textField.setColumns(10);
 	}
 }

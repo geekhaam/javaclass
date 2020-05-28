@@ -1,7 +1,0 @@
-package com.java.gui;
-
-import java.awt.Frame;
-
-public class HelloGUI2 extends Frame {
-
-}

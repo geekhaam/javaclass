@@ -1,0 +1,41 @@
+package com.java.thread;
+
+class Fruit1 extends Thread{
+	public void run() {
+		for(int i=0; i<10; i++) {
+			System.out.println("사과\t1개 주세요");
+		}
+	}
+}
+
+class Fruit2 extends Thread {
+	public void run() {
+		for(int i=0; i<10; i++) {
+			System.out.println("배\t1개 주세요");
+			
+		}
+	}
+}
+
+class Fruit3 extends Thread {
+	public void run() {
+		for(int i=0; i<10; i++) {
+			System.out.println("감\t1개 주세요");
+			
+		}
+	}
+}
+
+public class FruitClassMain {
+
+	public static void main(String[] args) {
+		Fruit1 f1 = new Fruit1();
+		Fruit2 f2 = new Fruit2();
+		Fruit3 f3 = new Fruit3();
+		
+		f1.start();
+		f2.start();
+		f3.start();
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.java.thread;
+
+
+public class TwoThreadMain {
+
+	public static void main(String[] args) {
+		ThreadClass tc1 = new ThreadClass();
+		ThreadClass tc2 = new ThreadClass();
+		tc1.start();
+		tc2.start();
+	}
+
+}

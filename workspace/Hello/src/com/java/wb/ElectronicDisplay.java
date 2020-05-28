@@ -19,6 +19,10 @@ class EDisplay extends JFrame implements ActionListener {
 	private Button b2 = new Button("³¡");
 	private TextField tf = new TextField();
 	
+	public EDisplay() {
+		
+	}
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub

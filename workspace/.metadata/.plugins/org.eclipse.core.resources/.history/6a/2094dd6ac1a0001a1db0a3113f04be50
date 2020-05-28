@@ -1,0 +1,15 @@
+package com.java.thread;
+
+public class InterruptThreadClass {
+
+	public static void main(String[] args) throws InterruptedException {
+		Thread th1 = new Thread(new RunnableClass());
+		th1.start();
+		
+		Thread.sleep(5000);
+		//5ÃÊ ÈÄ¿¡ interruptµÇ¾î Thread ¸ØÃã
+		
+		th1.interrupt(); //Thread Stop
+	}
+
+}

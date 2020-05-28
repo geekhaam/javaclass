@@ -14,3 +14,6 @@
 4월 09, 2020 15:44:06.73 [6528:6296:0409/154406.714:ERROR:disk_cache.cc(184)] Unable to create cache
 4월 09, 2020 15:44:06.73 [6528:6296:0409/154406.714:ERROR:shader_disk_cache.cc(606)] Shader Cache Creation failed: -2
 4월 09, 2020 15:44:06.76 기존 브라우저 세션에서 여는 중입니다.
+
+5월 27, 2020 19:16:58.40 NEW SESSION
+5월 27, 2020 19:16:58.43 [9236:8504:0527/191658.406:ERROR:browser_switcher_service.cc(238)] XXX Init()

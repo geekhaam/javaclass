@@ -1,0 +1,54 @@
+package com.java.thread;
+
+class Account {
+	private String customer;
+	private int balance;
+	
+	public Account() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Account(String customer, int balance) {
+		super();
+		this.customer = customer;
+		this.balance = balance;
+	}
+
+	public String getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(String customer) {
+		this.customer = customer;
+	}
+
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+	
+	public void withdraw(int amount) {
+		balance -= amount;
+	}
+	
+	public void withdraw(int)
+	
+	@Override
+	public String toString() {
+		return customer+"님의 잔액은 "+balance+"만원입니다.";
+	}
+	
+	
+}
+
+public class BankMainClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

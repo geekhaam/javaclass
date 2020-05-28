@@ -1,0 +1,186 @@
+package com.java.gui;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.SwingConstants;
+
+class KGBroadcast extends JFrame implements ActionListener {
+	
+	private JLabel lbl1, lbl2, lbl3;
+	private JButton btnSing, btnDance, btnEng, btnSports, btnEscape, btnGag,
+					btnPush, btnCancel;
+	private JComboBox<String> comboBox;
+	
+	private static boolean boolSing, boolDance, boolEng, boolSports, boolEscape, boolGag = false;
+	private static int score = 0;
+	
+	public KGBroadcast() {
+		
+		setSize(620, 860);
+		setLayout(new GridLayout(0, 3, 10, 10));
+
+		lbl1 = new JLabel("KG ¹æ¼Û ÁÖ°ü");
+		lbl1.setFont(new Font("±¼¸²", Font.BOLD, 20));
+		lbl1.setHorizontalAlignment(SwingConstants.CENTER);
+		add(lbl1);
+		
+		lbl2 = new JLabel("ºñ´ã¼±¹ß´ëÈ¸");
+		lbl2.setFont(new Font("±¼¸²", Font.BOLD, 20));
+		lbl2.setHorizontalAlignment(SwingConstants.CENTER);
+		add(lbl2);
+		
+		lbl3 = new JLabel("ÀßÇÑ ÄÚ³Ê´Â");
+		lbl3.setFont(new Font("±¼¸²", Font.BOLD, 20));
+		lbl3.setHorizontalAlignment(SwingConstants.CENTER);
+		add(lbl3);
+		
+		btnSing = new JButton("³ë·¡ 10Á¡");
+		btnSing.setFont(new Font("±¼¸²", Font.BOLD, 15));
+		btnSing.setHorizontalAlignment(SwingConstants.CENTER);
+		btnSing.addActionListener(this);
+		add(btnSing);
+		
+		btnDance = new JButton("´í½º 20Á¡");
+		btnDance.setFont(new Font("±¼¸²", Font.BOLD, 15));
+		btnDance.setHorizontalAlignment(SwingConstants.CENTER);
+		btnDance.addActionListener(this);
+		add(btnDance);
+	
+		btnEng = new JButton("¿µ¾î¿õº¯ 30Á¡");
+		btnEng.setFont(new Font("±¼¸²", Font.BOLD, 15));
+		btnEng.setHorizontalAlignment(SwingConstants.CENTER);
+		btnEng.addActionListener(this);
+		add(btnEng);
+		
+		btnSports = new JButton("Ã¶ÀÎ»ïÁ¾°æ±â 100Á¡");
+		btnSports.setFont(new Font("±¼¸²", Font.BOLD, 15));
+		btnSports.setHorizontalAlignment(SwingConstants.CENTER);
+		btnSports.addActionListener(this);
+		add(btnSports);
+		
+		btnEscape = new JButton("¹Ì·ÎÅ»Ãâ 90Á¡");
+		btnEscape.setFont(new Font("±¼¸²", Font.BOLD, 15));
+		btnEscape.setHorizontalAlignment(SwingConstants.CENTER);
+		btnEscape.addActionListener(this);
+		add(btnEscape);
+		
+		btnGag = new JButton("°³±× 80Á¡");
+		btnGag.setFont(new Font("±¼¸²", Font.BOLD, 15));
+		btnGag.setHorizontalAlignment(SwingConstants.CENTER);
+		btnGag.addActionListener(this);
+		add(btnGag);
+		
+		btnPush = new JButton("´­·¯¿ä!");
+		btnPush.setFont(new Font("±¼¸²", Font.BOLD, 20));
+		btnPush.setForeground(Color.WHITE);
+		btnPush.setBackground(Color.BLUE);
+		btnPush.setHorizontalAlignment(SwingConstants.CENTER);
+		btnPush.addActionListener(this);
+		add(btnPush);
+		
+		btnCancel = new JButton("Ãë¼Ò");
+		btnCancel.setFont(new Font("±¼¸²", Font.BOLD, 20));
+		btnCancel.setBackground(Color.ORANGE);
+		btnCancel.setHorizontalAlignment(SwingConstants.CENTER);
+		btnCancel.addActionListener(this);
+		add(btnCancel);
+		
+		comboBox = new JComboBox<String>();
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"10´ë", "20´ë", "30´ë ÀÌ»ó"}));
+		comboBox.addActionListener(this);
+		add(comboBox);
+		
+		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		String msg = null;
+		if(e.getSource() == btnSing) {
+			if(!boolSing) {
+				score += 10;
+				boolSing = true;				
+			}
+		} else if(e.getSource() == btnDance) {
+			score += 20;
+			boolDance = true;
+		} else if(e.getSource() == btnEng) {
+			score += 30;
+			boolEng = true;
+		} else if(e.getSource() == btnSports) {
+			score += 100;
+			boolSports = true;
+		} else if(e.getSource() == btnEscape) {
+			score += 90;
+			boolEscape = true;
+		} else if(e.getSource() == btnGag) {
+			score += 80;
+			boolGag = true;
+		}
+		
+		if(comboBox.getSelectedItem().equals("10´ë")) {
+			score += 30;
+			msg += comboBox.getSelectedItem() + " 30Á¡";
+		} else if(comboBox.getSelectedItem().equals("20´ë")) {
+			score += 20;
+			msg += comboBox.getSelectedItem() + " 20Á¡";
+		} else if(comboBox.getSelectedItem().equals("30´ë ÀÌ»ó")) {
+			score += 10;
+			msg += comboBox.getSelectedItem() + " 10Á¡";
+		}
+		
+		if(e.getSource() == btnPush) {
+			if(boolSing) {
+				msg += btnSing.getText() + "\n";
+			}
+			if(boolDance) {
+				msg += btnDance.getText() + "\n";
+			}
+			if(boolEng) {
+				msg += btnEng.getText() + "\n";
+			}
+			if(boolSports) {
+				msg += btnSports.getText() + "\n";
+			}
+			if(boolEscape) {
+				msg += btnEscape.getText() + "\n";
+			}
+			if(boolGag) {
+				msg += btnGag.getText() + "\n";
+			}
+			msg += "ÃÑ Á¡¼ö : " + score;
+			JOptionPane.showMessageDialog(null, msg);
+		} else if(e.getSource() == btnCancel) {
+			score = 0;
+			boolSing = false; boolDance = false; boolEng = false; 
+			boolSports = false; boolEscape = false; boolGag = false;
+			JOptionPane.showMessageDialog(null, "Ãë¼Ò");
+		}
+		
+		
+	}
+}
+
+public class KGBroadcastMain {
+
+	public static void main(String[] args) {
+		KGBroadcast kgb = new KGBroadcast();
+		kgb.setVisible(true);
+		
+
+	}
+
+}
