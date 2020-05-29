@@ -1,0 +1,121 @@
+※ Thread
+
+· Thread를 사용하는 두 가지 방식
+  1) extends Thread : simple, 확장성X (다중상송X)
+  2) implements Runnable : 인터페이스, 확장성O, 상속O (기본 상속도 가능, 다른 인터페이스)
+
+
+· 우선순위 : priority (Java Thread : 1-10), 만능X
+  MIN_PRIORITY = 1
+  NORM_PRIORITY = 5 (default)
+  MAX_PRIORITY = 10
+
+  채팅과 동시에 파일을 전송시 채팅에 우선순위를 더 두어야 원활하게 느껴진다.
+  -> 우선순위
+
+  JVM이 Thread Scheduling을 담당
+
+  방식 : 선점 방식 / 비선점 방식
+
+    - Round-Robin 방식 : 시분할 방식 (비선점)
+
+    - Preemptive(선점) 방식 : 높은 우선순위가 우선, 낮은 우선순위는 높은 우선순위가
+			  종료 or block 될 때까지 기다린다.
+
+    - 다단계 큐 방식(MQ : Multi level Queue)
+     : 다른 큐로 이동X. 상위 queue에 값이 들어오면 상위 queue로 cpu할당
+
+    - 다단계 피드백 큐 방식(MFQ: Multi level Feedback Queue)
+     : 낮은 우선 순위 쓰레드의 starvation을 완화시켜주는 방식으로
+       1순위 쓰레드가 1번 큐, 2순위 쓰레드는 2번 큐이며,
+       1순위쪽으로 갈수록 시간 설정은 작으며 다른 큐로 이동 가능한 방식
+    
+    - join()
+	join()이 기다리고 있다가 수행이 넘어오면 join()의 내용을 수행한 다음
+	다시 원래의 수행으로 되돌아 간다.
+	join()에 시간을 주지 않으면 무한 대기 상태이고,
+	join()에 시간을 주면 그 시간이 지난 뒤 join()이 수행된다.
+
+· 채팅 만들기
+
+[들어가기전]
+
+파일처리?
+
+open (소유권, lock, note open) ...도우미를 사용
+ |
+read / write
+ |
+close (소유권해제, unlock, note close)
+
+
+------------Socket Programming------------
+
+- Socket : Client Program과 Server Program이
+상호 통신시 Network상의 통신 접속점
+즉, 네트워크 상의 송수신은 socket 통하여 이루어진다
+
+- 소켓 연결원리 (전화거는 원리)
+		TCP Client	TCP Server
+my ip/ port
+		Socket()	ServerSocket()
+				(listen)
+		(connet)	accept()
+		i/o 스트림생성	i/o stream 생성
+
+		       rcv / send
+
+		close		close
+
+//--------------------------------------------
+	client : 전화거는 것이 서버에 요청하는것(connect())
+	즉, 소켓 생성과 동시에 connect요청이 진행됨
+	server : accept 즉, 기다리는것으로 서버는 전화를 기다린다.
+
+
+- 자바에서 사용하는 클래스
+
+	-- TCP Server Client : Socket class
+
+	(1) Socket s1 = new Socket("127.0.0.1", 7856);
+		--> 소켓 객체 생성시 C언어처럼 별도 connect() 없이 바로 서버와 연결
+	(2) InetAddress inet1 = InetAddress.getByName("www.kgedu.com");
+		Socket s1 = new Socket(inet1, 7875);
+
+	-- TCP Server : ServerSocket class
+		ServerSocket ss1 = new ServerSocket(7988);
+		Socket s1 = ss1.accept(); 연결 대기중
+		접속시 소켓 s1 객체 생성됨, 즉 s1은 client와 접속용 socket 객체
+
+
+- socket 프로그램 사용하기
+  (참고) javac aa.java //컴파일
+	java  aa      //실행 //aa.class
+
+	.class 위치는 bin 폴더에 있다.
+	bin 폴더를 명확히 볼 수 있는 view는 navigator탭
+
+  <실행방법> TcpServer.java TcpClient.java
+		(DataInputStream, DataOutputStream)
+
+	- 패키지 aa, .java 2개 작성 후 저장하면 compile 끝
+	- 윈도우 - show view - navigator 선택
+	- bin 방의 aa폴더를 찾아가 aa폴더를 통째로 복사하여 바탕화면에 복사
+	- 선택한 것 없는 상태에서
+		powershell 선택 후 서버부터 입력
+		java aa.TcpServer //패키지가 있는 경우의 실행 방법
+
+	- 다시 한 번 선택한 것 없는 상태에서
+		powershell 선택 후 클라이언트 입력
+
+* && - and
+   & - bit and
+
+- 채팅 프로그램에서 제일 먼저 만드는 것은 echo program
+
+
+- Network Stream
+
+	------------->
+Client	Network Stream	Server
+	<-------------
