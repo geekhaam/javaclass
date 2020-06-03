@@ -87,7 +87,10 @@ public class ChatClientGUI extends JFrame implements Runnable, ActionListener {
 				if(strServer == null) {
 					tArea.append("\n¡æ∑·");
 					return;
-				} tArea.append("\n"+strServer);
+				}
+				tArea.append("\n"+strServer);
+				int endOfTA = tArea.getText().length();
+				tArea.setCaretPosition(endOfTA);
 			}
 		} catch (Exception e) {
 			tArea.append("\n"+e);
