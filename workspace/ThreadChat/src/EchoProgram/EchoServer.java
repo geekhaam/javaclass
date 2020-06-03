@@ -19,7 +19,7 @@ public class EchoServer {
 		
 		int b1; //byte stream을 처리
 		while(true) {
-			b1 = is1.read(); //문자열 읽기 Client --> Server
+			b1 = is1.read(); //문자열 읽기 Client --> Server (한 글자씩 입력 받음)
 			if(b1 == -1) {
 				break;
 			}

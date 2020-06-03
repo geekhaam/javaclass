@@ -9,14 +9,18 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.Scanner;
 
-public class EchoClient {
+public class ClaEchoClient {
 
 	public static void main(String[] args)
 				throws UnknownHostException, IOException {
 		
-		Scanner sc = new Scanner(System.in);
+		if(args.length != 2) {
+			System.out.println("명령행인자로 IP주소와 포트번호를 입력하시오");
+			System.exit(0);
+		}
 		
-		Socket s = new Socket("127.0.0.1", 7111); //connect
+		Scanner sc = new Scanner(System.in);
+		Socket s = new Socket(args[0], Integer.parseInt(args[1]));
 		
 		BufferedReader br1 = new BufferedReader(
 				new InputStreamReader(s.getInputStream()));
@@ -31,9 +35,8 @@ public class EchoClient {
 				break;
 			}
 			bw1.write(inputToServer, 0, inputToServer.length());
-			//server로 보냄, 입력 받은 것을 0번부터 모든 길이만큼 전부 전송
-			bw1.newLine(); //줄바꿈도 보냄
-			bw1.flush(); //무조건 전송 후, buffer 비움
+			bw1.newLine();
+			bw1.flush();
 			String outputFromServer = br1.readLine();
 			System.out.println("서버로 부터 다시 받음 : " + outputFromServer);
 		}

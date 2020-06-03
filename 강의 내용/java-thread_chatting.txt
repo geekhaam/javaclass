@@ -89,6 +89,7 @@ my ip/ port
 
 
 - socket 프로그램 사용하기
+
   (참고) javac aa.java //컴파일
 	java  aa      //실행 //aa.class
 
