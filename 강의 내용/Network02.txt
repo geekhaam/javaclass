@@ -1,0 +1,107 @@
+
+· HTTP : Hyper Text Transfer Protocol
+	(hypertext : 링크를 통해 문서를 자유롭게 이동할 수 있는 방식)
+
+	* 인터넷 서비스
+	- WWW(World Wide Web) : HTTP 방식의 인터넷 서비스로 브라우저를 이용
+	- FTP : File Transfer Protocol
+		 인터넷을 통한 파일 송수신 서비스
+	- Telnet : 인터넷을 통해 원격지 호스트에 접속
+	- email
+	- gopher : 인터넷을 통한 문서 검색 서비스 (www가 역할을 대신하고 있다.)
+
+	* Domain Name(www.naver.com 같은 영문 이름)을 숫자 주소로 변환
+
+	   user
+	http://www.naver.com  -  DNS  -  http://128.34.56.72
+	httP://128.34.56.72   ---------  http://128.34.56.72
+
+	내 컴퓨터 - 영문자 주소 - IP 숫자 주소로 해석 - 목적지 컴퓨터
+			     www.naver.com   123.12.22.33  네이버 서버 컴퓨터
+
+
+· TCP/IP Model : OSI의 변형판으로 인터넷의 구조를 의미
+  		 (TCP는 패킷을 신뢰성 있게 꼼꼼히 처리 / IP는 패킷을 정확한 위치에 빨리 전송)
+
+	A+P+S		--> [4L] Application
+	Transport	--> [3L] Transport(TCP, 신뢰성 전달을 위해 패킷 나눔 및 조립 실시)
+	Network		--> [2L] Network(IP, 정확한 목적지로 전송)
+	D+P		--> [1L] Network Interface
+
+	즉, 7단계가 4단계로 변형 표시된다.
+	 이것이 인터넷
+	 - D+P에서는 MAC 주소를 구분하여 찾아간다.
+	 - N에서는 IP 주소로 구분하여 찾아간다.
+	 - T에서는 택배를 받을 프로세스를 찾아간다.(포트 번호)
+
+	* IP Address
+	 - 특히 네트워크에서 컴퓨터를 구분하기 위한 컴퓨터 고유 주소
+	 - 32bit, 0~255 사이의 10진수 4개, 구분자는 .
+		예) 0.0.0.0 ~ 255.255.255.255 (IPv4)
+	   내 컴퓨터(localhost) 주소는 127.0.0.1
+	 - 약 40억 여개 주소 사용 가능
+
+	(참고) IoT(Internet of Things, 사물인터넷)
+		에서 1.5조개 연결, IP주소 부족 해결은 IPv6(IPv6는 128비트)
+
+	(참고) IP 주소를 관장하는 기관
+		NIC (Network Information Center)
+
+	    APNIC		Ripe		InterNIC
+	(Asia Pacific)		(유럽)		 (미주)
+	 krnic, jpnic				 .com
+						 .edu
+	    co.kr				 .gov
+	    co.jp
+	    ac.kr
+	    go.kr
+
+	* port NO. : 한 컴퓨터 내에서 프로세스 구분 번호
+	   - 사용 방법 :	주소 : 포트번호 (예: 192.1.23.22:5678)
+	   - 16bit(65536개 사용 가능)
+	   - 숫자 앞 번호는 특정 번호에 사용
+		20-21(FTP), 23(telnet), 80(http), ...
+
+	(참고) ICANN이 나눈 포트번호 범위
+		ICANN은 국제 인터넷 주소 관리 기구로
+		Internet Corporation for Assigned Names and Numbers의 약어
+
+		0 ~ 1023 : ICANN이 관리
+		1024 ~ 49151 : Registered Port라고 하나 관리 제한 없음
+		49152 ~ 65535 : Dynamic Port로 사용 가능
+		(short -32768 ~ + 32767		0 ~ 65535)
+
+
+- TCP/IP와 UDP 프로토콜
+
+ * TCP/IP
+ (Transmission control protocol / Internet protocol)
+ -- Connected Oriented protocol로 통신주체 상호간
+    data교환전에 접속 설정을 먼저한 후 전송
+	예) 전화걸기
+ -- 인터넷 사용을 위한 프로토콜
+ -- client / server model로 통신 (c/s model)
+    (client : 자료를 받는쪽, 크기와 무관
+     server : 자료를 공급하는쪽)
+
+	c/s model =====================> Internet(WEB)
+	(독립적)				(공유,안정적)
+
+ *UDP (User Datagram Protocol)
+ -- Connectionless data delivery service 로
+ 통신 주체 상호간에 접속하는 절차 없이 data를 delivery함
+	예) 편지보내기
+ -- 주로 속도를 요하는 온라인게임, 영상스트리밍에서 사용
+ 즉, 몇개의 입력이빠져도, 조금 스트리밍에서
+ 영상이 빠지더라도 지연없이 다음으로 바로 넘어가게됨
+
+(localhost, 127.0.0.1)
+	chat client	- chat server	-	chat client
+	    카톡		-    카톡서버	-	    카톡
+			 ( 192.30.50.2 ) 둘이서 할때 주소
+
+
+
+
+
+
