@@ -156,3 +156,4 @@
 		  
 
 	=> 즉 Data -> Segment -> Packet -> Frame -> bit 로 전송
+
